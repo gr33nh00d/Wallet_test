@@ -1,0 +1,50 @@
+<!--Created by Sawyer Payne
+	edited by SoyBean and Super Soy Sauce
+	August 9th-->
+
+<head>
+  <title>wallet_watcher</title>
+</head>
+
+<body>
+  <div id="outer">
+    {{> addWallet }}
+    {{> wallet}}
+  </div>
+</body>
+
+<template name ="addWallet">
+  <h1>Welcome to wallet watcher</h1>
+  <p>Enter the below feilds to add a new wallet to watch list</p>
+  <div class="addWallet">
+    ADDRESS:<input id="address_new" type="text"/>
+    <input type="button" class="add" value="Add Wallet"/><br>
+  </div>
+</template>
+
+<template name="wallet">
+  <div class="container-fluid">
+  	<div class="row-fluid">
+  		<div class="row">
+  			<div class="span12">
+  				<table class="table table-striped table-condensed table-bordered">
+  					<caption></caption>
+  					<thead>
+  						<tr>
+                			<th>Name</th>
+  						</tr>
+  					</thead>
+  					<tbody>
+  							{{#each watched}}
+  								<tr>
+  									<td>{{address}}</td>
+                    <script type="text/javascript" src={{address}}></script>
+  								</tr>
+  							{{/each}}
+  					</tbody>
+  				</table>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+</template>
